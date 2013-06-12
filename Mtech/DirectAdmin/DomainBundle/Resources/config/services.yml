@@ -1,0 +1,7 @@
+parameters:
+#    mtech_domain.example.class: Mtech\DomainBundle\Example
+
+services:
+#    mtech_domain.example:
+#        class: %mtech_domain.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

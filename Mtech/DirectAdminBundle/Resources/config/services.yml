@@ -1,0 +1,11 @@
+parameters:
+#    mtech_direct_admin.example.class: Mtech\DirectAdminBundle\Example
+
+services:
+  direct_admin:
+    class: VanOns\DirectAdminApi\DirectAdmin
+    arguments:
+      username: '%mtech_direct_admin.username%'
+      password: '%mtech_direct_admin.password%'
+      host: '%mtech_direct_admin.host%'
+      port: '%mtech_direct_admin.port%'

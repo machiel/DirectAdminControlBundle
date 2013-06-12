@@ -1,0 +1,36 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>user.name</th>
+            <th>bandwidth.usage</th>
+            <th>bandwidth.limit</th>
+            <th>diskspace.usage</th>
+            <th>diskspace.limit</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td><a href="{{ path('show_domains', { 'user' : user.username }) }}">{{ user.username }}</a></td>
+                <td>{{ user.bandwidthUsed }}</td>
+                <td>{{ user.bandwidthLimit }}</td>
+                <td>{{ user.diskSpaceUsed }}</td>
+                <td>{{ user.diskSpaceLimit }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">users.not.found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <form action="{{ path('add_user') }}" class="form-horizontal" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <button class="btn btn-large btn-primary" type="submit">Bewerken</button>
+    </form>
+
+{% endblock %}

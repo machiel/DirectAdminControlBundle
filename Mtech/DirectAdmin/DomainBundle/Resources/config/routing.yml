@@ -1,0 +1,3 @@
+show_domains:
+    pattern:  /{user}/domain
+    defaults: { _controller: MtechDirectAdminDomainBundle:Domain:show }

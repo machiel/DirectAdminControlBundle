@@ -1,0 +1,9 @@
+show_users:
+    pattern: /users
+    defaults: { _controller: MtechDirectAdminUserBundle:User:index }
+
+add_user:
+    pattern:  /user/add
+    defaults: { _controller: MtechDirectAdminUserBundle:User:add }
+    requirements:
+      _method: POST

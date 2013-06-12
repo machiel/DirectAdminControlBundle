@@ -1,0 +1,30 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>domain.name</th>
+            <th>domain.bandwidth.usage</th>
+            <th>domain.bandwidth.limit</th>
+            <th>domain.diskspace.usage</th>
+            <th>domain.diskspace.limit</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for domain in domains %}
+            <tr>
+                <td>{{ domain.domainName }}</td>
+                <td>{{ domain.bandwidthUsed }}</td>
+                <td>{{ domain.bandwidthLimit }}</td>
+                <td>{{ domain.diskSpaceUsed }}</td>
+                <td>{{ domain.diskSpaceLimit }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">domain.no.domains.in.system</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

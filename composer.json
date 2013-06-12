@@ -1,0 +1,24 @@
+{
+    "name": "machiel/direct-admin-control-bundle",
+    "type": "library",
+    "description": "Control Panel for Symfony2 to manage DirectAdmin",
+    "keywords": [],
+    "homepage": "http://github.com/Machiel/DirectAdminControlBundle",
+    "authors": [
+        {
+            "name": "Machiel Molenaar",
+            "email": "m@chielmolenaar.nl",
+            "homepage": "http://machiel.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "van-ons/direct-admin-api": "dev-master",
+        "psr/log": "~1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mtech": ""
+        }
+    }
+}
